@@ -1,1 +1,0 @@
-# tanishparashar.github.io
