@@ -1,4 +1,13 @@
-/* --- RESET & BASES --- */
+/* --- COLOR PALETTE --- */
+:root {
+  --bg-light: #fff9e3;     /* light cream for hero */
+  --bg-alt:   #f5f0e1;     /* slightly deeper cream for alt sections */
+  --nav-bg:   #e3d9c7;     /* muted cream for navbar */
+  --accent:   #c59d5f;     /* warm accent for highlights & buttons */
+  --text:     #333333;     /* standard dark text */
+}
+
+/* --- RESET & BASE --- */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +16,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
+  background: var(--bg-alt);
 }
 .container {
   width: 90%;
@@ -17,8 +27,7 @@ body {
 
 /* --- NAVBAR --- */
 nav {
-  background: #222;
-  color: #fff;
+  background: var(--nav-bg);
 }
 nav .container {
   display: flex;
@@ -27,6 +36,7 @@ nav .container {
 }
 nav .logo {
   font-size: 1.5rem;
+  color: var(--text);
 }
 nav .nav-links {
   list-style: none;
@@ -36,36 +46,37 @@ nav .nav-links li {
   margin-left: 1rem;
 }
 nav .nav-links a {
-  color: #fff;
+  color: var(--text);
   text-decoration: none;
 }
 
 /* --- HERO --- */
 .hero {
-  background: #f4f4f4;
+  background: var(--bg-light);
   padding: 4rem 0;
   text-align: center;
 }
 .hero .highlight {
-  color: #007acc;
+  color: var(--accent);
 }
 
 /* --- SECTIONS --- */
 .section {
   padding: 3rem 0;
+  background: white;
 }
 .alt-bg {
-  background: #f9f9f9;
+  background: var(--bg-alt);
 }
 
 /* --- PROJECT GRID --- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 .project-card {
-  background: #fff;
+  background: white;
   padding: 1.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -78,18 +89,19 @@ nav .nav-links a {
   margin-top: 1rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid #007acc;
+  border: 1px solid var(--accent);
   border-radius: 2px;
+  color: var(--text);
 }
 .btn:hover {
-  background: #007acc;
-  color: #fff;
+  background: var(--accent);
+  color: white;
 }
 
 /* --- FOOTER --- */
 footer {
-  background: #222;
-  color: #fff;
+  background: var(--nav-bg);
+  color: var(--text);
   text-align: center;
   padding: 1rem 0;
 }
